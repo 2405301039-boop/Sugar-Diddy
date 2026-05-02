@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayglow | Fuel Your Glow</title>
+    <meta name="description" content="Dayglow is a bold, modern café for a vibrant aesthetic culture.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (Phosphor Icons for sleek modern look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Animated Full Background -->
+    <div class="bg-animated"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">DAYGLOW</a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#location">Location</a>
+        </div>
+
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <!-- Background particle effect canvas layer inside JS -->
+        <div class="hero-particles" id="particlesContainer"></div>
+        <div class="hero-glow"></div>
+
+        <div class="hero-content">
+            <h1>DAYGLOW</h1>
+            <p class="tagline">Fuel Your Glow.</p>
+            <button class="btn-glow"
+                onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Explore Menu</button>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="section-header reveal">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title">Vibrant Modern <span class="highlight">Culture</span></h2>
+            <p class="section-subtitle">More than just coffee. It's an aesthetic experience, a creative hub, and the
+                heartbeat of the neon generation.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text reveal-left">
+                <p>Welcome to <span class="accent">Dayglow</span>, where artisanal roasting meets futuristic ambition.
+                    We source the finest beans globally and extract them in an environment designed to elevate your
+                    senses.</p>
+                <p>Designed for the bold and the energetic, our spaces run on high frequencies, glowing neon, and
+                    unmatched caffeine.</p>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Vibes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Locations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Energy</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image-group reveal-right">
+                <div class="about-img-card">
+                    <img src="images/cafe-interior.png" alt="Aesthetic neon cafe interior">
+                </div>
+                <div class="about-img-card">
+                    <img src="images/coffee-cup.png" alt="Artisanal Latte Art">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu-section">
+        <div class="section-header reveal">
+            <span class="section-label">The Fuel</span>
+            <h2 class="section-title">Signature <span class="highlight">Menu</span></h2>
+            <p class="section-subtitle">Crafted with precision, served with attitude.</p>
+        </div>
+
+        <div class="menu-grid stagger-children">
+            <!-- Item 1 -->
+            <div class="menu-card">
+                <i class="ph ph-coffee menu-icon" style="color: #ff9a44"></i>
+                <h3>Neon Espresso</h3>
+                <p>Double shot of our darkest roast. High octane energy to kickstart your matrix.</p>
+                <div class="menu-price">$4.50</div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card">
+                <i class="ph ph-drop menu-icon" style="color: #a855f7"></i>
+                <h3>Midnight Cold Brew</h3>
+                <p>Steeped for 18 hours. Smooth, intense, served over crystal clear ice cubes.</p>
+                <div class="menu-price">$5.50</div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card">
+                <i class="ph ph-martini menu-icon" style="color: #ff6a00"></i>
+                <h3>Cyber Matcha</h3>
+                <p>Ceremonial grade matcha with layered oat milk and a hint of vanilla glow.</p>
+                <div class="menu-price">$6.00</div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-card">
+                <i class="ph ph-croissant menu-icon" style="color: #7c3aed"></i>
+                <h3>Void Croissant</h3>
+                <p>Charcoal-infused butter pastry with a molten dark chocolate center.</p>
+                <div class="menu-price">$4.00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header reveal">
+            <span class="section-label">The aesthetic</span>
+            <h2 class="section-title">See The <span class="highlight">Glow</span></h2>
+        </div>
+
+        <div class="gallery-grid stagger-children">
+            <div class="gallery-item">
+                <img src="images/cafe-interior.png" alt="Cafe Interior">
+                <div class="gallery-overlay">
+                    <h4>The Lounge</h4>
+                    <p>Neon ambient lighting and raw textures.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/coffee-cup.png" alt="Latte Art">
+                <div class="gallery-overlay">
+                    <h4>Precision Pours</h4>
+                    <p>Artisanal hot drinks.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cold-brew.png" alt="Cold Brew">
+                <div class="gallery-overlay">
+                    <h4>Iced Signatures</h4>
+                    <p>Caramel drizzle cold brew perfection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="location-section">
+        <div class="location-grid">
+            <div class="location-card reveal-left">
+                <span class="section-label">Find Us</span>
+                <h3>Neon District Hub</h3>
+
+                <div class="icon-text">
+                    <i class="ph ph-map-pin icon"></i>
+                    <p>2049 Synthesis Blvd.<br>Sector 4, Cyber City 8810</p>
+                </div>
+
+                <div class="icon-text">
+                    <i class="ph ph-envelope-simple icon"></i>
+                    <p>hello@dayglow.cafe<br>+1 (800) 555-GLOW</p>
+                </div>
+
+                <div class="map-placeholder">
+                    <span><i class="ph ph-map-trifold" style="color: rgba(255,255,255,0.2)"></i></span>
+                </div>
+            </div>
+
+            <div class="location-card reveal-right">
+                <span class="section-label">Operating</span>
+                <h3>Hours</h3>
+
+                <div class="hours-grid">
+                    <div class="hours-row">
+                        <span class="day">Monday - Wednesday</span>
+                        <span class="time">07:00 - 20:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Thursday - Friday</span>
+                        <span class="time">07:00 - 23:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Saturday</span>
+                        <span class="time">08:00 - 01:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Sunday</span>
+                        <span class="time">09:00 - 21:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">DAYGLOW</div>
+
+            <div class="nav-links" style="display:flex; gap: 1.5rem">
+                <a href="#about" style="font-size: 0.75rem">Story</a>
+                <a href="#menu" style="font-size: 0.75rem">Menu</a>
+                <a href="#location" style="font-size: 0.75rem">Visit</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#"><i class="ph ph-tiktok-logo"></i></a>
+                <a href="#"><i class="ph ph-twitter-logo"></i></a>
+            </div>
+
+            <div class="footer-copy">
+                &copy; <span id="year"></span> Dayglow Café. All rights reserved. Designed for the bold.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- ✨ Glowieee — Chatbase Floating Chat Panel -->
+    <style>
+        /* --- Glowieee Launcher Button --- */
+        #glowieee-launcher {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 10000;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            animation: glowieee-float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 14px rgba(255, 106, 0, 0.7));
+            transition: opacity 0.2s;
+        }
+
+        #glowieee-launcher img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2.5px solid rgba(255, 154, 68, 0.8);
+            background: rgba(20, 10, 30, 0.85);
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        #glowieee-launcher:hover img {
+            transform: scale(1.12);
+            filter: drop-shadow(0 0 22px rgba(168, 85, 247, 1));
+        }
+
+        #glowieee-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #ff9a44;
+            text-shadow: 0 0 10px rgba(255, 106, 0, 0.9);
+            background: rgba(10, 5, 20, 0.7);
+            padding: 2px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 106, 0, 0.35);
+        }
+
+        @keyframes glowieee-float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        #glowieee-launcher::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 106, 0, 0.4);
+            animation: glowieee-pulse 2s ease-out infinite;
+        }
+
+        @keyframes glowieee-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* --- Glowieee Chat Panel --- */
+        #glowieee-panel {
+            position: fixed;
+            bottom: 110px;
+            right: 24px;
+            width: 380px;
+            height: 560px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1.5px solid rgba(255, 106, 0, 0.4);
+            box-shadow: 0 0 40px rgba(255, 106, 0, 0.25), 0 0 80px rgba(168, 85, 247, 0.15);
+            background: #0a050f;
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            animation: glowieee-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: bottom right;
+        }
+
+        #glowieee-panel.open {
+            display: flex;
+        }
+
+        @keyframes glowieee-pop {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Panel header */
+        #glowieee-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: linear-gradient(90deg, rgba(255, 106, 0, 0.15), rgba(168, 85, 247, 0.15));
+            border-bottom: 1px solid rgba(255, 106, 0, 0.2);
+        }
+
+        #glowieee-header img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1.5px solid #ff9a44;
+        }
+
+        #glowieee-header-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #ff9a44;
+            letter-spacing: 0.06em;
+            text-shadow: 0 0 8px rgba(255, 106, 0, 0.7);
+            flex: 1;
+        }
+
+        #glowieee-header-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.45);
+            display: block;
+            font-weight: 400;
+        }
+
+        #glowieee-close {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.3rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 2px 6px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        #glowieee-close:hover {
+            color: #ff6a00;
+            background: rgba(255, 106, 0, 0.1);
+        }
+
+        /* The iframe itself */
+        #glowieee-panel iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+    </style>
+
+    <!-- Glowieee Launcher Button -->
+    <div id="glowieee-launcher" title="Chat with Glowieee ✨" onclick="toggleGlowieee()">
+        <img src="images/glowieee.png" alt="Glowieee">
+        <span id="glowieee-label">GLOWIEEE ✨</span>
+    </div>
+
+    <!-- Glowieee Floating Chat Panel -->
+    <div id="glowieee-panel">
+        <div id="glowieee-header">
+            <img src="images/glowieee.png" alt="Glowieee">
+            <div>
+                <span id="glowieee-header-name">GLOWIEEE ✨</span>
+                <span id="glowieee-header-sub">Dayglow's AI barista · always on</span>
+            </div>
+            <button id="glowieee-close" onclick="toggleGlowieee()" title="Close">✕</button>
+        </div>
+        <iframe src="https://www.chatbase.co/chatbot-iframe/-0HAlYYNs-4tOoCALaZUI" width="100%"
+            style="height: 100%; min-height: 700px" frameborder="0" allow="microphone">
+        </iframe>
+    </div>
+
+    <script>
+        function toggleGlowieee() {
+            const panel = document.getElementById('glowieee-panel');
+            panel.classList.toggle('open');
+            // Pause float animation while panel is open for cleaner UX
+            const launcher = document.getElementById('glowieee-launcher');
+            launcher.style.animation = panel.classList.contains('open')
+                ? 'none' : 'glowieee-float 3s ease-in-out infinite';
+        }
+    </script>
+</body>
+
+</html>
